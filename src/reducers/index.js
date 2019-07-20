@@ -1,12 +1,13 @@
-import { combineReducers } from "redux";
+import { combineReducers } from 'redux';
 
 //Reducers
-import { title, content } from "./form";
-import { todoLists } from "./todoLists";
+import { title, content, query } from './form';
+import { todoLists } from './todoLists';
 
 const reducers = combineReducers({
   title,
   content,
+  query,
   lists: todoLists
 });
 

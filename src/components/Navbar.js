@@ -1,11 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-light bg-light"
-      style={{ marginBottom: "20px" }}
+      className="navbar navbar-expand-lg navbar-light"
+      style={{ marginBottom: '20px', backgroundColor: 'lightblue' }}
     >
       <button
         className="navbar-toggler"
@@ -24,7 +24,10 @@ const Navbar = () => {
             Home
           </Link>
           <Link to="/add" className="nav-item nav-link active">
-            Add To-Do
+            Add Todo Item
+          </Link>
+          <Link to="/search" className="nav-item nav-link active">
+            Search
           </Link>
         </div>
       </div>

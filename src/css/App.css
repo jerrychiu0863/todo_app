@@ -1,6 +1,9 @@
 .App {
   text-align: center;
-  padding: 0 50px;
+  max-width: 70vw;
+  margin: 0 auto;
+  min-height: 100vh;
+  border: 4px solid lightblue;
 }
 
 .App-logo {
@@ -22,13 +25,4 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
