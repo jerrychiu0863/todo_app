@@ -1,0 +1,44 @@
+.ListItem {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ListItem__item {
+  padding: 5px;
+  padding-right: 10px;
+  text-align: left;
+}
+
+.ListItem__cardContainer {
+  border-top: 5px solid lightblue;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+  padding: 10px;
+  min-height: 150px;
+  display: block;
+  position: relative;
+  background: #fff;
+}
+
+.ListItem__cardContainer--link {
+  text-decoration: none;
+}
+
+.ListItem__cardContainer--link:hover {
+  text-decoration: underline;
+  color: #333;
+}
+
+.ListItem__cardContainer--title {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.ListItem__cardContainer--date {
+  font-size: 14px;
+  color: #666;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}

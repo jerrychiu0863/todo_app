@@ -17,9 +17,19 @@ const List = props => {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        maxWidth: '30vw',
+        margin: '0 auto',
+        border: '1px solid rgba(0,0,0,.2)',
+        padding: '20px',
+        borderRadius: '3px'
+      }}
+    >
       <h3>{selectedList.title}</h3>
-      <p style={{ whiteSpace: 'pre-wrap' }}>{selectedList.content}</p>
+      <p style={{ whiteSpace: 'pre-wrap', textAlign: 'left' }}>
+        {selectedList.content}
+      </p>
       <Button
         className={'btn-info'}
         onClick={() =>

@@ -7,11 +7,11 @@ import ListItem from '../components/ListItem';
 const Search = props => {
   const { lists, query, handleQueryInput } = props;
   const findListsByQuery = lists.filter(list =>
-    list.title.includes(query) ? list : null
+    list.title.toLowerCase().includes(query) ? list : null
   );
 
   return (
-    <div style={{ padding: '0 20px' }}>
+    <div style={{ padding: '0 20px', maxHeight: '85vh', overflowY: 'auto' }}>
       <div
         className="form-group"
         style={{ maxWidth: '70%', margin: '0 auto 20px auto' }}

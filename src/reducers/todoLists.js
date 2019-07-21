@@ -1,8 +1,8 @@
 const lists = [
   {
     id: Math.random().toString(),
-    title: '123',
-    content: '456',
+    title: 'First TodoList',
+    content: '1. Grocery shopping\n2. Swim',
     timeStamp: new Date().toLocaleString().substr(0, 9)
   },
   {

@@ -8,7 +8,7 @@ const Main = props => {
   const { lists, editTodoList, deleteTodoList } = props;
 
   return (
-    <div style={{ padding: '0 20px' }}>
+    <div style={{ padding: '0 20px', maxHeight: '85vh', overflowY: 'auto' }}>
       <h1>Todo Lists</h1>
       {lists.length !== 0 ? (
         <ListItem
