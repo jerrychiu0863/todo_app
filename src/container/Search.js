@@ -8,6 +8,7 @@ import ListItem from '../components/ListItem';
 
 const Search = props => {
   const { lists, query, handleQueryInput } = props;
+  
   const findListsByQuery = lists.filter(list =>
     list.title.toLowerCase().includes(query) ? list : null
   );

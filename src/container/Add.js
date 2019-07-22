@@ -66,7 +66,6 @@ Add.propTypes = {
   clearInputValue: PropTypes.func.isRequired
 };
 
-
 const mapStateToProps = ({ title, content }) => {
   return { title, content };
 };

@@ -12,6 +12,7 @@ import Button from '../components/Button';
 
 const Edit = props => {
   const { title, content, handleTitleInput, handleContentInput } = props;
+  
   const onEditBtnSubmit = e => {
     e.preventDefault();
     //Get id from url
