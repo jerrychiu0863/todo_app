@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import '../css/List.css';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { editTodoList, deleteTodoList } from '../actions';
@@ -17,19 +19,9 @@ const List = props => {
   };
 
   return (
-    <div
-      style={{
-        maxWidth: '30vw',
-        margin: '0 auto',
-        border: '1px solid rgba(0,0,0,.2)',
-        padding: '20px',
-        borderRadius: '3px'
-      }}
-    >
+    <div className="List">
       <h3>{selectedList.title}</h3>
-      <p style={{ whiteSpace: 'pre-wrap', textAlign: 'left' }}>
-        {selectedList.content}
-      </p>
+      <p className="List--content">{selectedList.content}</p>
       <Button
         className={'btn-info'}
         onClick={() =>
@@ -48,6 +40,12 @@ const List = props => {
       </Button>
     </div>
   );
+};
+
+List.propTypes = {
+  lists: PropTypes.array.isRequired,
+  editTodoList: PropTypes.func.isRequired,
+  deleteTodoList: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => {

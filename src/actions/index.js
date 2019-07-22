@@ -17,7 +17,6 @@ export const handleQueryInput = value => ({
 export const clearInputValue = () => ({
   type: 'CLEAR_INPUT_VALUE'
 });
-
 /*The End of Form Actions */
 
 //Todo Lists actions
@@ -42,5 +41,4 @@ export const deleteTodoList = id => ({
   type: 'DELETE_TODO_LIST',
   payload: id
 });
-
 /*The End of Lists Actions */

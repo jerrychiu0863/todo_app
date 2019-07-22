@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {
   handleTitleInput,
@@ -55,6 +56,16 @@ const Add = props => {
     </form>
   );
 };
+
+Add.propTypes = {
+  title: PropTypes.string,
+  content: PropTypes.string,
+  handleTitleInput: PropTypes.func.isRequired,
+  handleContentInput: PropTypes.func.isRequired,
+  addTodoLists: PropTypes.func.isRequired,
+  clearInputValue: PropTypes.func.isRequired
+};
+
 
 const mapStateToProps = ({ title, content }) => {
   return { title, content };

@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import '../css/Search.css';
 import { connect } from 'react-redux';
 import { handleQueryInput } from '../actions';
 
@@ -11,11 +13,8 @@ const Search = props => {
   );
 
   return (
-    <div style={{ padding: '0 20px', maxHeight: '85vh', overflowY: 'auto' }}>
-      <div
-        className="form-group"
-        style={{ maxWidth: '70%', margin: '0 auto 20px auto' }}
-      >
+    <div className="Search">
+      <div className="Search--input form-group">
         <input
           type="text"
           className="form-control"
@@ -27,6 +26,12 @@ const Search = props => {
       <ListItem lists={findListsByQuery} />
     </div>
   );
+};
+
+Search.propTypes = {
+  query: PropTypes.string,
+  lists: PropTypes.array.isRequired,
+  handleQueryInput: PropTypes.func.isRequired
 };
 
 const mapStateToProps = ({ query, lists }) => {

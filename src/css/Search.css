@@ -1,0 +1,10 @@
+.Search {
+  padding: 0 20px;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.Search--input {
+  max-width: 70%;
+  margin: 0 auto 20px auto;
+}

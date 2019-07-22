@@ -1,0 +1,12 @@
+.List {
+  max-width: 30vw;
+  margin: 0 auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 3px;
+}
+
+.List--content {
+  white-space: pre-wrap;
+  text-align: left;
+}

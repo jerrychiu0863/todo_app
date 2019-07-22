@@ -1,33 +1,15 @@
-const lists = [
-  {
-    id: Math.random().toString(),
-    title: 'First TodoList',
-    content: '1. Grocery shopping\n2. Swim',
-    timeStamp: new Date().toLocaleString().substr(0, 9)
-  },
-  {
-    id: Math.random().toString(),
-    title: 'abe',
-    content: 'ddd',
-    timeStamp: new Date().toLocaleString().substr(0, 9)
-  },
-  {
-    id: Math.random().toString(),
-    title: 'we',
-    content: 'ccc',
-    timeStamp: new Date().toLocaleString().substr(0, 9)
-  }
-];
-export const todoLists = (state = lists, action) => {
+import cuid from 'cuid';
+
+export const todoLists = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO_LIST':
       const { title, content } = action.payload;
       const newLists = [
         {
-          id: Math.random().toString(),
+          id: cuid(),
           title,
           content,
-          timeStamp: new Date().toLocaleString().substr(0, 9)
+          timeStamp: new Date().toLocaleString().substr(0, 9) //Get MM/DD/Year
         },
         ...state
       ];
@@ -35,7 +17,7 @@ export const todoLists = (state = lists, action) => {
 
     case 'EDIT_TODO_LIST':
       const { id } = action.payload;
-      //Find list and overwrite the value
+      //Find list by id and overwrite the title and content
       const editedLists = state.filter(list => {
         if (list.id === id) {
           const { title, content } = action.payload;

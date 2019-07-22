@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../css/ListItem.css';
 import { Link } from 'react-router-dom';
 
@@ -23,6 +24,10 @@ const ListItem = props => {
       ))}
     </ul>
   );
+};
+
+ListItem.propTypes = {
+  lists: PropTypes.array.isRequired
 };
 
 export default ListItem;

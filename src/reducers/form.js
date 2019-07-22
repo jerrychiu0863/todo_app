@@ -3,7 +3,7 @@ export const title = (state = '', action) => {
     case 'ON_TITLE_INPUT_CHANGE':
       return action.payload;
 
-    //Pass value to input from list
+    //Pass value to input from selected list
     case 'EDIT_TODO_LIST':
       return action.payload.title;
 
@@ -20,7 +20,7 @@ export const content = (state = '', action) => {
     case 'ON_CONTENT_INPUT_CHANGE':
       return action.payload;
 
-    //Pass value to input from list
+    //Pass value to input from selected list
     case 'EDIT_TODO_LIST':
       return action.payload.content;
     

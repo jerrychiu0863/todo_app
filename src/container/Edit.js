@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {
   handleTitleInput,
@@ -10,6 +11,7 @@ import {
 import Button from '../components/Button';
 
 const Edit = props => {
+  const { title, content, handleTitleInput, handleContentInput } = props;
   const onEditBtnSubmit = e => {
     e.preventDefault();
     //Get id from url
@@ -28,8 +30,8 @@ const Edit = props => {
           type="text"
           className="form-control"
           placeholder="Enter Title"
-          value={props.title}
-          onChange={e => props.handleTitleInput(e.target.value)}
+          value={title}
+          onChange={e => handleTitleInput(e.target.value)}
         />
       </div>
       <div className="form-group">
@@ -39,9 +41,9 @@ const Edit = props => {
           type="text"
           className="form-control"
           placeholder="Enter Todo Lists"
-          value={props.content}
+          value={content}
           rows="10"
-          onChange={e => props.handleContentInput(e.target.value)}
+          onChange={e => handleContentInput(e.target.value)}
         />
       </div>
       <Button className={'btn-info'} onClick={onEditBtnSubmit}>
@@ -49,6 +51,15 @@ const Edit = props => {
       </Button>
     </form>
   );
+};
+
+Edit.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  handleTitleInput: PropTypes.func.isRequired,
+  handleContentInput: PropTypes.func.isRequired,
+  editTodoList: PropTypes.func.isRequired,
+  clearInputValue: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => {
